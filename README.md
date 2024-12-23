@@ -1,5 +1,4 @@
 # Gridventory - Inventory Management App  
-**Author**: Anthony  
 **Course**: CS 360 - Mobile Architect and Programming  
 **Project**: Project Three  
 
