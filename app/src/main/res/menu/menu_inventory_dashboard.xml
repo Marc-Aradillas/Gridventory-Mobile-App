@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- SMS Settings -->
+    <item
+        android:id="@+id/menu_sms_settings"
+        android:title="@string/sms_settings"
+        android:icon="@drawable/ic_sms"
+        app:showAsAction="ifRoom" />
+
+    <!-- Logout -->
+    <item
+        android:id="@+id/menu_logout"
+        android:title="@string/logout"
+        app:showAsAction="always" />
+
+</menu>
+

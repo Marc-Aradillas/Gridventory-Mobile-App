@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- App Bar Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:title="@string/app_name" />
+
+    <!-- Title for Inventory Dashboard -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="@string/inventory_dashboard"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- Input Fields Section -->
+    <LinearLayout
+        android:id="@+id/inputSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Item Name Input -->
+        <EditText
+            android:id="@+id/itemNameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:autofillHints=""
+            android:background="@drawable/edittext_rounded"
+            android:hint="@string/item_name"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textSize="14sp"
+            tools:ignore="Autofill,TextContrastCheck,TextContrastCheck" />
+
+        <!-- Item Quantity Input -->
+        <EditText
+            android:id="@+id/itemQuantityInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@drawable/edittext_rounded"
+            android:hint="@string/quantity"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#757575"
+            android:textSize="14sp"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <!-- Add Button -->
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputSection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/add_item"
+        android:textColor="@android:color/white" />
+
+    <!-- RecyclerView for Inventory List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inventoryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/addButton"
+        android:layout_marginTop="8dp"
+        android:background="#F8E9CB"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+</RelativeLayout>
